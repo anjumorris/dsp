@@ -51,7 +51,7 @@ However, this is completely optional as Anaconda is an all-in-one package manage
 
 Did you install Python 2 or 3? Why?  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I have installed Python 3 since support for Python 2 will be dicontinued after 2020. 80% or higher libs of python2 are available now in python3. Both HackerRank and Dataquest which I have been using to learn Python support Python 3 only 
 
 ### Q2. Which Python Version Installed   
 
@@ -59,7 +59,7 @@ In the Terminal:
 
 `python3 --version`
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 3.6.5
 
  
 
