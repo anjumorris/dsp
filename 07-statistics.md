@@ -86,14 +86,81 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 45.20%
+>>
+>> ```mermaid
+>> graph LR
+>> E(Elvis)
+>> T(Twin)
+>> NT(No Twin)
+>> E--1.13%---T
+>> E--98.87%---NT
+>> F(Fraternal)
+>> I(Identical)
+>> T--70.80%---F
+>> T--29.20%---I
+>> null(...)
+>> NT--0%---null
+>> B1(Boy)
+>> G1(Girl)
+>> B2(Boy)
+>> G2(Girl)
+>> F--50%---B1
+>> F--50%---G1
+>> I--100%---B2
+>> I--0%---G2
+>> ```
+>>
+>> ```python
+>> P(twin) & P(frat) = 1/125 = 0.8%
+>> P(twin) & P(I) = 1/300 = 0.33%
+>> P(twin) = 0.8% + 0.33% = 1.13% -> P(not twin) = 98.87%
+>> 
+>> P(frat|twin) = 0.8%/1.13%
+>> P(I|twin) = 0.33%/1.13%
+>> 
+>> Elvis has twin brother. ->boy
+>> P(boy) = (70.80% * 50%) + (29.20% * 100%) = 64.6%
+>> 
+>> Calculate P(I|boy) = P(boy|I).P(I)/P(boy)
+>> = (100% * 29.20%)/64.6% = 45.20%
+>> ```
+>>
+>>
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> They are two general philosopies or approaches in infertential statistics. The differences between the two frameworks come from the way the concept of probability itself is interpreted. Frequentists approach a problem by calculating the maximum likelyhood estimate. They don't assign probabilities to possible parameter values .
+>>
+>> Bayesian inference is subjective and uses a prior beliefs.  Bayesian Inference can have a full posterior distribution over the possible parameter values which allows them to take into account the uncertainty in the estimate by integrating the full posterior distribution, instead of basing the prediction just on the most likely value.  
+>>
+>> Key Differences
+>>
+>> #####Bayesian inference 
+>>
+>> 1. uses probabilities for both hypotheses and data.
+>> 2. depends on the prior and likelihood of observed data
+>> 3. requires one to know or construct a ‘subjective prior
+>> 4. dominated statistical practice before the 20th century.
+>> 5. may be computationally intensive due to integration over many parameters. 
+>>
+>> #####Frequentist inference
+>>
+>> 1. never uses or gives the probability of a hypothesis (no prior or posterior).
+>> 2. depends on the likelihood P (D | H)) for both observed and unobserved data. • does not require a prior.
+>> 3. dominated statistical practice during the 20th century.
+>> 4. tends to be less computationally intensive. 
+>>
+>> As computation abilities have increased considerably the Bayesian inference approach is possible and has extensive application in hypothesis testing over the frequentist approach (P- values and confidence intervals)
+>>
+>> [1]  *Comparison of frequentist and Bayesian inference. Class 20, 18.05 Jeremy Orloff and Jonathan Bloom*  
+>>
+>> [2] *https://www.probabilisticworld.com/frequentist-bayesian-approaches-inferential-statistics/*
+>>
+>>
 
 ---
 
